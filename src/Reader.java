@@ -32,9 +32,9 @@ public class Reader implements Consumer{
 			if(readBooks.contains(b.getNumber())) {		//jesli tak - zwroc ksiazke od razu
 				bookStorage.add(b);
 			} else {									//jesli nie - czytaj, dodaj do swojej listy przeczytanych i potem zwroc
-				System.out.println(Thread.currentThread().getName() + ": czytam ksiazke nr: [" + b.getNumber() + "]");
+				System.out.println(Thread.currentThread().getName() + ": reading book no.: [" + b.getNumber() + "]");
 				sleeep(2000);
-				System.out.println(Thread.currentThread().getName() + ": przeczytalem ksiazke nr: [" + b.getNumber() + "]");
+				System.out.println(Thread.currentThread().getName() + ": finished reading book no.: [" + b.getNumber() + "]");
 				readBooks.add(b.getNumber());
 				bookStorage.add(b);
 			}	

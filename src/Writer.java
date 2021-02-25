@@ -28,9 +28,9 @@ public class Writer implements Producer{
 		try {
 			// Thread.yield();
 			Book b = booksToWrite.take();
-			System.out.println(Thread.currentThread().getName() + ": piszę ksiazkę nr: [" + b.getNumber() + "]");
+			System.out.println(Thread.currentThread().getName() + ": writing book no.: [" + b.getNumber() + "]");
 			sleeep(2000);
-			System.out.println(Thread.currentThread().getName() + ": napisałem ksiazkę nr: [" + b.getNumber() + "]");
+			System.out.println(Thread.currentThread().getName() + ": finished book no: [" + b.getNumber() + "]");
 			bookStorage.add(b);
 			
 		} catch (InterruptedException e) {

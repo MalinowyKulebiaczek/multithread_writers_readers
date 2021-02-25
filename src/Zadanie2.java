@@ -4,6 +4,10 @@ public class Zadanie2 {
 	
 	public Zadanie2(int B, int W, int R) throws InterruptedException {
 		
+		System.out.println("Number of writers: " + W);
+		System.out.println("Number of books: " + B);
+		System.out.println("Number of readers: " + R);
+		
 		BlockingQueue<Book> booksToWrite = new ArrayBlockingQueue<>(B);
 		BlockingQueue<Book> bookStorage = new ArrayBlockingQueue<>(B);
 		
